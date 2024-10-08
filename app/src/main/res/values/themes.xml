@@ -1,0 +1,30 @@
+<!-- res/values/themes.xml -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base theme -->
+    <style name="Theme.PhantomTroupe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Warna Primer -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+
+        <!-- Warna Sekunder -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+
+        <!-- Warna Latar Belakang -->
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
+
+        <!-- Warna Status Bar -->
+        <item name="android:statusBarColor">@color/statusBarColor</item>
+
+        <!-- Warna Error -->
+        <item name="colorError">@color/colorError</item>
+
+        <!-- Font dan Typography -->
+        <item name="android:textColor">@color/colorOnBackground</item>
+
+        <!-- Mengatur Window Light Status Bar (Opsional) -->
+        <item name="android:windowLightStatusBar">false</item>
+
+    </style>
+</resources>

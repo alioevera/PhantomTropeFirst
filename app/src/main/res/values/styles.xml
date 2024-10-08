@@ -1,0 +1,39 @@
+<resources>
+    <!-- Style untuk TextView Judul -->
+    <style name="TitleText" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textColor">@color/colorOnPrimary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Style untuk TextView Subjudul -->
+    <style name="SubtitleText" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textColor">@color/colorOnBackground</item>
+    </style>
+
+    <!-- Style untuk Button -->
+    <style name="PrimaryButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorOnPrimary</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <!-- Style untuk ImageView (Profile Icon) -->
+    <style name="ProfileIcon">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- Style untuk Heading dalam Deskripsi -->
+    <style name="DescriptionHeading">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <!-- Style untuk Isi Deskripsi -->
+    <style name="DescriptionBody">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorOnBackground</item>
+    </style>
+</resources>
