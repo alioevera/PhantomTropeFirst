@@ -1,23 +1,22 @@
-<!-- res/values/colors.xml -->
 <resources>
-    <!-- Warna Primer -->
+    <!-- Primary Color -->
     <color name="colorPrimary">#387478</color>
     <color name="colorOnPrimary">#FFFFFF</color>
 
-    <!-- Warna Sekunder -->
+    <!-- Secondary Color -->
     <color name="colorSecondary">#FF6200EE</color>
     <color name="colorOnSecondary">#FFFFFF</color>
 
-    <!-- Warna Latar Belakang -->
+    <!-- Background Color -->
     <color name="colorBackground">#FFFFFF</color>
     <color name="colorOnBackground">#000000</color>
 
-    <!-- Warna Status Bar -->
+    <!-- Status Bar Color -->
     <color name="statusBarColor">#387478</color>
 
-    <!-- Warna Error -->
+    <!-- Error Color -->
     <color name="colorError">#B00020</color>
 
-    <!-- Warna Tambahan (Jika diperlukan) -->
-    <!-- <color name="colorAccent">#03DAC5</color> -->
+    <!-- Accent Color -->
+    <color name="colorAccent">#03DAC5</color> <!-- Uncomment if needed -->
 </resources>

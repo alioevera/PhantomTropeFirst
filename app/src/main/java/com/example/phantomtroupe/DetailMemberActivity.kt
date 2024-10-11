@@ -124,7 +124,29 @@ class DetailMemberActivity : AppCompatActivity() {
             Shizuku is a Conjurer with the ability to materialize a vacuum cleaner named Blinky. This Nen ability allows her to suck up nonliving objects while excluding living things and Nen-based items, making it useful for erasing evidence left by the Phantom Troupe.
 
             Shizuku's Nen techniques include Ten, Hatsu, and Gyo, indicating her advanced skills as a Nen user. Blinky can inhale an infinite number of nonliving items, but only the last object vacuumed can be regurgitated, and Shizuku doesn't know where the others go. She can also use Blinky to remove foreign materials from living bodies and, in combat, wield it as a weapon or even exsanguinate opponents by sucking their blood from wounds. Her ability is considered rare and valuable to the Troupe.
-        """.trimIndent()
+        """.trimIndent(),
+
+        "Franklin" to """
+        Personality
+
+        Franklin is a ruthless and analytical member of the Phantom Troupe, known for his willingness to kill and even enjoying combat. He is loyal to the Troupe, willing to do whatever it takes to ensure its survival, including killing some members if necessary. Like other Troupe members, Franklin participated in the massacre of the Kurta Clan and took pleasure in slaughtering Mafia auction members. Despite his brutality, he also shows strong loyalty to Meteor City, contributing to its defense alongside his comrades.
+
+        Skills
+
+        Franklin is an Emitter with a secondary affinity for Enhancement. As a powerful Nen user, he possesses a large amount of aura and can shoot devastating bullets without tiring. His Emission ability, Double Machine Gun, allows him to fire aura bullets from his severed fingertips with high speed and power, ideal for mass slaughter. Franklin chose to cut off his fingertips to increase the effectiveness and power of his ability, leveraging the Nen principle of self-imposed limitations. His Enhancement skills also make him highly durable in combat.
+    """.trimIndent(),
+
+        "Pakunoda" to """
+        Personality
+
+        Pakunoda exuded confidence and was fiercely loyal to Chrollo, even defying the Troupe's principle of prioritizing the group over the individual to rescue him. She sacrificed herself so her comrades could learn about Kurapika's abilities. Like the other Spiders, she was cold-blooded and ruthless, participating in the Kurta Clan massacre. Her cruel side was evident when she tortured and provoked Squala, leading to his death. Despite this, she was impressed by Gon and Killua's bravery. In her youth, Pakunoda was kind and caring toward her friends.
+
+        Skills
+
+        Pakunoda was a Specialist with the unique ability to read and implant memories through physical contact. Her psychometry allowed her to uncover secrets and abilities, making her invaluable for extortion and intelligence gathering. Renowned for her impressive Zetsu skills, she could pursue targets unnoticed. Pakunoda's Nen abilities included the ability to read memories, making it impossible for others to deceive her, and the use of Memory Bombs, which enabled her to implant or erase memories without causing any physical harm. Her loyalty to the Phantom Troupe and her strategic prowess set her apart as a formidable member of the group.
+    """.trimIndent()
+
+
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -9,6 +9,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhantomTroupe">
         <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".DetailMemberActivity"
             android:exported="false" />
         <activity

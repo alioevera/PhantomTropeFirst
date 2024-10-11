@@ -1,5 +1,6 @@
 package com.example.phantomtroupe
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -24,14 +25,24 @@ class MainActivity : AppCompatActivity() {
             Hero("Feitan Portor", "Deskripsi Feitan", R.drawable.feitan, 2, "21 Oktober 2000"),
             Hero("Machi Komacine", "Deskripsi Machi", R.drawable.machi, 3, "16 September 2010"),
             Hero("Hisoka Morrow", "Deskripsi Hisoka", R.drawable.hisoka, 4, "05 Januari 1994"),
-            Hero("Phinks", "Deskripsi Phinks", R.drawable.phinks, 5, "01 Desember 1998"),
+            Hero("Phinks", "Deskripsi Phinks", R.drawable.phinks2, 5, "01 Desember 1998"),
             Hero("Shalnark", "Deskripsi Shalnark", R.drawable.shalnark, 6, "17 September 1998"),
-            Hero("Shizuku Murasaki", "Deskripsi Shizuku", R.drawable.shizuku, 8, "15 Maret 2003")
+            Hero("Franklin", "Deskripsi Franklin", R.drawable.franklin, 7, "25 Mei 1995"),
+            Hero("Shizuku Murasaki", "Deskripsi Shizuku", R.drawable.shizuku, 8, "15 Maret 2003"),
+            Hero("Pakunoda", "Deskripsi Pakunoda", R.drawable.pakunoda, 9, "09 Desember 2000")
         )
 
         // Initialize RecyclerView
         heroAdapter = HeroAdapter(heroList, this)
         binding.recyclerViewMemberInfo.layoutManager = LinearLayoutManager(this)
         binding.recyclerViewMemberInfo.adapter = heroAdapter
+
+        binding.iconUser.setOnClickListener {
+            // Start ProfileActivity
+            val intent = Intent(this, ProfileActivity::class.java)
+            startActivity(intent)
+        }
+
     }
+
 }
