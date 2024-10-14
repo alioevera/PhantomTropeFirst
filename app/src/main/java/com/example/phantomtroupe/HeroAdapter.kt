@@ -24,12 +24,13 @@ class HeroAdapter(private val heroes: List<Hero>, private val mainActivity: Main
                 val intent = Intent(context, DetailMemberActivity::class.java).apply {
                     putExtra("HERO_NAME", hero.name) // Pass the hero name
                     putExtra("HERO_IMAGE", hero.photo) // Pass the hero image resource ID
+                    putExtra("HERO_NUMBER", hero.number) // Pass the hero number
+                    putExtra("HERO_BIRTHDATE", hero.birthDate) // Pass the hero birth date
                 }
                 context.startActivity(intent)
             }
         }
     }
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HeroViewHolder {
         val binding = ItemMemberBinding.inflate(LayoutInflater.from(parent.context), parent, false)

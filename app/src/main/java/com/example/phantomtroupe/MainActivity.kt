@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
             Hero("Nobunaga Hazama", "Deskripsi Nobu", R.drawable.nobu, 1, "11 Januari 1999"),
             Hero("Feitan Portor", "Deskripsi Feitan", R.drawable.feitan, 2, "21 Oktober 2000"),
             Hero("Machi Komacine", "Deskripsi Machi", R.drawable.machi, 3, "16 September 2010"),
-            Hero("Hisoka Morrow", "Deskripsi Hisoka", R.drawable.hisoka, 4, "05 Januari 1994"),
+            Hero("Hisoka Morow", "Deskripsi Hisoka", R.drawable.hisoka, 4, "05 Januari 1994"),
             Hero("Phinks", "Deskripsi Phinks", R.drawable.phinks2, 5, "01 Desember 1998"),
             Hero("Shalnark", "Deskripsi Shalnark", R.drawable.shalnark, 6, "17 September 1998"),
             Hero("Franklin", "Deskripsi Franklin", R.drawable.franklin, 7, "25 Mei 1995"),

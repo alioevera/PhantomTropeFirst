@@ -72,6 +72,32 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" />
 
+            <!-- Nomor Hero -->
+            <TextView
+                android:id="@+id/hero_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Number: "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/hero_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Tanggal Lahir Hero -->
+            <TextView
+                android:id="@+id/hero_birthDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Date of Birth: "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/hero_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
             <!-- Teks Detail -->
             <TextView
                 android:id="@+id/details_text"
@@ -83,7 +109,7 @@
                 android:textAlignment="viewStart"
                 android:padding="8dp"
                 android:gravity="start|top"
-                app:layout_constraintTop_toBottomOf="@id/hero_image"
+                app:layout_constraintTop_toBottomOf="@id/hero_birthDate"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent" />

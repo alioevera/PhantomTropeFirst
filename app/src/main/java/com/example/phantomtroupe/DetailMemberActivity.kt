@@ -7,9 +7,9 @@ import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.RelativeSizeSpan
+import android.text.style.StyleSpan
 import androidx.appcompat.app.AppCompatActivity
 import com.example.phantomtroupe.databinding.ActivityDetailMemberBinding
-import android.text.style.StyleSpan
 
 class DetailMemberActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailMemberBinding
@@ -154,29 +154,49 @@ class DetailMemberActivity : AppCompatActivity() {
         binding = ActivityDetailMemberBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        // Mendapatkan nama hero dan gambar dari intent
+        // Mengatur tombol kembali
+        binding.backButton.setOnClickListener {
+            finish()
+        }
+
+        // Mendapatkan data dari Intent
         val heroName = intent.getStringExtra("HERO_NAME") ?: return
         val heroImageResId = intent.getIntExtra("HERO_IMAGE", -1)
+        val heroNumber = intent.getIntExtra("HERO_NUMBER", -1)
+        val heroBirthDate = intent.getStringExtra("HERO_BIRTHDATE") ?: "N/A"
 
-        // Set judul
+        // Mengatur judul sesuai dengan nama karakter
         binding.titleText.text = heroName
 
-        // Mendapatkan deskripsi
+        // Menetapkan gambar hero ke ImageView
+        if (heroImageResId != -1) {
+            binding.heroImage.setImageResource(heroImageResId)
+        }
+
+        // Menampilkan nomor dan tanggal lahir di bawah gambar
+        if (heroNumber != -1) {
+            binding.heroNumber.text = "Number: $heroNumber"
+        } else {
+            binding.heroNumber.text = "Number: N/A"
+        }
+        binding.heroBirthDate.text = "Date of Birth: $heroBirthDate"
+
+        // Mendapatkan deskripsi karakter
         val description = heroDescriptions[heroName] ?: "Description not found."
 
-        // Membuat SpannableString
+        // Membuat SpannableString dari deskripsi karakter
         val spannableDescription = SpannableString(description)
 
-        // Daftar kata-kata yang ingin diformat
+        // Daftar heading yang ingin diformat
         val headings = listOf("Personality", "Skills")
 
-        // Iterasi melalui setiap kata heading dan terapkan gaya
+        // Menerapkan gaya pada heading (heading akan menjadi tebal dan lebih besar)
         for (heading in headings) {
             var startIndex = spannableDescription.indexOf(heading)
             while (startIndex != -1) {
                 val endIndex = startIndex + heading.length
 
-                // Terapkan Bold
+                // Menerapkan gaya bold pada heading
                 spannableDescription.setSpan(
                     StyleSpan(Typeface.BOLD),
                     startIndex,
@@ -184,7 +204,7 @@ class DetailMemberActivity : AppCompatActivity() {
                     Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
                 )
 
-                // Terapkan Ukuran Teks Lebih Besar (misalnya 1.2 kali ukuran normal)
+                // Menerapkan ukuran font yang lebih besar pada heading
                 spannableDescription.setSpan(
                     RelativeSizeSpan(1.2f),
                     startIndex,
@@ -192,30 +212,19 @@ class DetailMemberActivity : AppCompatActivity() {
                     Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
                 )
 
-                // Cari occurrence berikutnya jika ada
+                // Mencari heading berikutnya
                 startIndex = spannableDescription.indexOf(heading, endIndex)
             }
         }
 
-        // Set teks ke TextView
+        // Menampilkan deskripsi dalam TextView
         binding.detailsText.text = spannableDescription
 
-        // Mengatur justifikasi teks
+        // Memastikan konten berjalan dengan baik di perangkat modern
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             binding.detailsText.justificationMode = LineBreaker.JUSTIFICATION_MODE_INTER_WORD
         }
-
-        // Set gambar hero
-        if (heroImageResId != -1) {
-            binding.heroImage.setImageResource(heroImageResId)
-        } else {
-            binding.heroImage.setImageResource(R.drawable.default_image) // Gambar default opsional
-        }
-
-        // Listener untuk tombol kembali
-        binding.backButton.setOnClickListener {
-            finish() // Tutup aktivitas dan kembali
-        }
     }
 }
+
 
