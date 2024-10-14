@@ -112,12 +112,10 @@ class DetailMemberActivity : AppCompatActivity() {
             When Shalnark uses **Autopilot Mode** by sticking an antenna into himself, he gains significant boosts in speed and strength, allowing him to take down enemies easily. However, he remains unaware of his actions while in this mode and suffers intense muscle pain afterward. This ability also prevents other Manipulators from taking control of him, adding to its effectiveness.
         """.trimIndent(),
 
-        "Shizuku" to """
+        "Shizuku Murasaki" to """
             Personality
 
             Shizuku is characterized as calm, aloof, and callous, often making blunt statements that offend those around her. Despite her air-headed demeanor and forgetfulness, she is extremely loyal to the Phantom Troupe and adheres to Chrollo's rules, particularly against infighting among members.
-
-            She has friendly relationships within the group, frequently teaming up with Franklin and showing visible distress over Pakunoda's death. However, like her comrades, Shizuku is cold-blooded and ruthless, quick to kill when ordered, even for trivial reasons, such as considering killing Leorio for being too loud.
 
             Skills
 
@@ -144,9 +142,7 @@ class DetailMemberActivity : AppCompatActivity() {
         Skills
 
         Pakunoda was a Specialist with the unique ability to read and implant memories through physical contact. Her psychometry allowed her to uncover secrets and abilities, making her invaluable for extortion and intelligence gathering. Renowned for her impressive Zetsu skills, she could pursue targets unnoticed. Pakunoda's Nen abilities included the ability to read memories, making it impossible for others to deceive her, and the use of Memory Bombs, which enabled her to implant or erase memories without causing any physical harm. Her loyalty to the Phantom Troupe and her strategic prowess set her apart as a formidable member of the group.
-    """.trimIndent()
-
-
+    """.trimIndent(),
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -158,6 +154,7 @@ class DetailMemberActivity : AppCompatActivity() {
         binding.backButton.setOnClickListener {
             finish()
         }
+
 
         // Mendapatkan data dari Intent
         val heroName = intent.getStringExtra("HERO_NAME") ?: return
@@ -226,5 +223,3 @@ class DetailMemberActivity : AppCompatActivity() {
         }
     }
 }
-
-
